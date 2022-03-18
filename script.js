@@ -1,20 +1,17 @@
-
-
-
 (function () {
 
-    "use strict"; 
+    "use strict";
 
-    function changeHeading(){
+    function changeHeading() {
         let WishListContainer = document.getElementById('destinations_container');
-        // console.log(WishListContainer)
+
 
         if (WishListContainer.children.length === 0) {
-            // console.log("if executed");
+
             document.getElementById('title').innerHTML = "Enter Destination Details";
         }
         else {
-            // console.log("else executed");
+
             document.getElementById('title').innerHTML = "My WishList";
         }
     }
@@ -30,8 +27,7 @@
 
         let destname = event.target.elements['name'].value;
         let destlocation = (event.target.elements['location'].value).split(" ").join("");
-        //destlocation = destlocation.split(" ").join("");
-        // console.log(destlocation)
+
         let destphoto = event.target.elements['photo'].value;
         let destdesc = event.target.elements['description'].value;
 
@@ -55,7 +51,7 @@
         let img = document.createElement('img');
 
 
-        //let constantPhotoUrl = "signpost.jpg";
+
 
         if (photoURL.length === 0) {
             require("dotenv").config();
@@ -90,7 +86,7 @@
         }
 
         card.appendChild(img);
-        //console.log(card);
+
 
         let cardbody = document.createElement('div');
         cardbody.className = "card-body";
@@ -128,6 +124,6 @@
         changeHeading();
     }
 
-    
+
 
 })()
